@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>My test page</title>
-  </head>
-  <body>
-    <p>This is my page</p>
-    <script src="script.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <title>My test page</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="title">Library</div>
+    <button class="help-btn">?</button>
+  </div>
+  <div class="tools">
+    <span class="order-label">Order by:</span>
+    <select name="order" id="order-select">
+      <option value="alphabetical">Alphabetical Order</option>
+      <option value="added">Added</option>
+      <option value="read">Read</option>
+    </select>
+    <button class="add-btn">+</button>
+    <dialog>
+      <form id="dialog-add">
+        <span>Add book</span>
+        <label for="input-name">Name: </label>
+        <input name="input-name" type="text">
+        <label for="input-author">Author: </label>
+        <input name="input-author" type="text">
+        <label for="input-pages">No. of pages: </label>
+        <input name="input-pages" type="number">
+        <button class="submit-btn">Add</button>
+      </form>
+    </dialog>
+  </div>
+  <div class="book-list"></div>
+  <script src="script.js"></script>
+</body>
+
 </html>
