@@ -11,30 +11,57 @@
 <body>
   <div class="header">
     <div class="title">Library</div>
-    <button class="help-btn">?</button>
+    <button class="help-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path fill="var(--text)"
+          d="M424-320q0-81 14.5-116.5T500-514q41-36 62.5-62.5T584-637q0-41-27.5-68T480-732q-51 0-77.5 31T365-638l-103-44q21-64 77-111t141-47q105 0 161.5 58.5T698-641q0 50-21.5 85.5T609-475q-49 47-59.5 71.5T539-320H424Zm56 240q-33 0-56.5-23.5T400-160q0-33 23.5-56.5T480-240q33 0 56.5 23.5T560-160q0 33-23.5 56.5T480-80Z" />
+      </svg>
+    </button>
   </div>
   <div class="tools">
-    <span class="order-label">Order by:</span>
-    <select name="order" id="order-select">
-      <option value="alphabetical">Alphabetical Order</option>
-      <option value="added">Added</option>
-      <option value="read">Read</option>
-    </select>
-    <button class="add-btn">+</button>
-    <dialog>
-      <form id="dialog-add">
+    <div class="order-field">
+      <span class="order-label">Order by:</span>
+      <select name="order" id="order-select">
+        <option value="alphabetical">Alphabetical Order</option>
+        <option value="added">Added</option>
+        <option value="read">Read</option>
+      </select>
+    </div>
+    <button class="add-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path fill="var(--text)" d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+      </svg>
+    </button>
+
+
+    <dialog id="dialog-add">
+      <form id="form-add">
         <span>Add book</span>
-        <label for="input-name">Name: </label>
-        <input name="input-name" type="text">
-        <label for="input-author">Author: </label>
-        <input name="input-author" type="text">
-        <label for="input-pages">No. of pages: </label>
-        <input name="input-pages" type="number">
+        <button type="button" class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+            viewBox="0 -960 960 960" width="24">
+            <path fill="var(--text)"
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+        </button>
+        <div class="form-field">
+          <label for="input-name">Name: </label>
+          <input class="form-input" name="input-name" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="input-author">Author: </label>
+          <input class="form-input" name="input-author" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="input-pages">No. of pages: </label>
+          <input class="form-input" name="input-pages" type="number">
+        </div>
         <button class="submit-btn">Add</button>
       </form>
     </dialog>
   </div>
-  <div class="book-list"></div>
+  <div class="book-list">
+
+  </div>
   <script src="script.js"></script>
 </body>
 
