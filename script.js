@@ -1,8 +1,8 @@
 const plusBtn = document.querySelector(".plus-btn");
 const dialogAdd = document.querySelector("#dialog-add");
-const closeBtn = document.querySelector(".close-btn");
+const closeBtn = document.querySelector("#dialog-add-close-btn");
 const formAdd = document.querySelector("#form-add");
-const btnAdd = document.querySelector(".form-add-btn");
+const addBtn = document.querySelector(".form-add-btn");
 const bookList = document.querySelector(".book-list");
 
 const myLibrary = [];
@@ -13,8 +13,6 @@ function Book(name, author, pages, status) {
     this.pages = pages;
     this.status = status;
 }
-
-
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
@@ -37,11 +35,10 @@ function createBookDiv(book) {
 
     deleteBtn.className = "delete-book";
     deleteBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"> <path fill="var(--text)" d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /> </svg>';
-    deleteBtn.addEventListener("click", function (){
+    deleteBtn.addEventListener("click", function () {
         removeBookFromLibrary(book);
         bookDiv.remove();
-    })
-
+    });
 
     bookName.innerText = book.name;
     bookAuthor.innerText = book.author;
@@ -49,7 +46,7 @@ function createBookDiv(book) {
 
     readCheckText.innerText = "Read";
     readCheck.type = "checkbox";
-    readCheckText.className = "read-text"
+    readCheckText.className = "read-text";
     readCheck.className = "read-check";
     readCheck.addEventListener('change', function () {
         if (this.checked) {
@@ -70,10 +67,8 @@ function createBookDiv(book) {
 
     bookDiv.className = "book-wrapper";
 
-
     bookList.appendChild(bookDiv);
 }
-
 
 plusBtn.addEventListener("click", () => {
     dialogAdd.showModal();
@@ -81,9 +76,9 @@ plusBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
     dialogAdd.close();
-})
+});
 
-btnAdd.addEventListener("click", function (e) {
+addBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
     const formData = new FormData(formAdd);
@@ -105,4 +100,4 @@ btnAdd.addEventListener("click", function (e) {
         dialogAdd.close();
         formAdd.reset();
     }
-})
+});

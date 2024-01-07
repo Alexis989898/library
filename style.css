@@ -89,12 +89,6 @@ input {
     padding-left: 20px;
 }
 
-.help-btn {
-    font-size: 2rem;
-    height: 50px;
-    width: 50px;
-}
-
 .tools {
     flex: 1;
     width: max(60%, 300px);
@@ -162,7 +156,7 @@ input {
     width: 200px;
 }
 
-.close-btn {
+#dialog-add-close-btn {
     font-size: 1rem;
     padding: 10px;
     padding-bottom: 5px;
