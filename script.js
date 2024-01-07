@@ -85,7 +85,7 @@ addBtn.addEventListener("click", function (e) {
 
     if (formData.get("input-name") == "" || formData.get("input-author") == "") {
         alert("Input every information of the book");
-    } else if (100000 >= formData.get("input-pages") <= 0) {
+    } else if (formData.get("input-pages") >= 0 || formData.get("input-pages") <= 100000) {
         alert("Input a number of pages from 1 to 100.000")
     } else {
         let formName = formData.get("input-name");
